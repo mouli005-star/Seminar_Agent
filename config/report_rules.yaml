@@ -1,0 +1,201 @@
+# Report Rules Configuration for SeminarAgent
+# This file defines the structure, format, and requirements for generated reports
+
+# Report Structure and Sections
+report_structure:
+  # Required sections (in order)
+  required_sections:
+    - "title_page"
+    - "table_of_contents"
+    - "executive_summary"
+    - "introduction"
+    - "literature_review"
+    - "methodology"
+    - "findings_and_analysis"
+    - "discussion"
+    - "conclusion"
+    - "recommendations"
+    - "references"
+    - "appendices"
+  
+  # Optional sections (can be included if relevant)
+  optional_sections:
+    - "acknowledgments"
+    - "glossary"
+    - "list_of_figures"
+    - "list_of_tables"
+    - "abbreviations"
+
+# Content Requirements
+content_requirements:
+  # Length requirements
+  length:
+    min_pages: 10
+    max_pages: 30
+    target_pages: 15-20
+    
+    # Section length guidelines
+    section_lengths:
+      executive_summary: "1-2 pages"
+      introduction: "2-3 pages"
+      literature_review: "4-6 pages"
+      methodology: "2-3 pages"
+      findings: "3-5 pages"
+      discussion: "3-4 pages"
+      conclusion: "1-2 pages"
+      recommendations: "1-2 pages"
+  
+  # Content quality requirements
+  quality:
+    min_sources: 15
+    target_sources: 20-25
+    recent_sources_percentage: 80  # Sources from last 5-10 years
+    peer_reviewed_percentage: 90
+    
+    # Source types
+    source_types:
+      - "peer-reviewed journal articles"
+      - "systematic reviews"
+      - "meta-analyses"
+      - "high-impact factor journals"
+      - "recent publications (2014-2024)"
+
+# Writing Style and Tone
+writing_style:
+  tone: "academic"
+  language: "professional"
+  complexity: "intermediate"
+  
+  # Language requirements
+  language_requirements:
+    use_active_voice: true
+    avoid_jargon: false  # Academic jargon is acceptable
+    sentence_length: "varied"
+    paragraph_structure: "topic_sentence + supporting_evidence + conclusion"
+  
+  # Academic writing standards
+  academic_standards:
+    use_third_person: true
+    avoid_contractions: true
+    use_present_tense_for_general_truths: true
+    use_past_tense_for_methods_and_findings: true
+
+# Citation and Referencing
+citations:
+  style: "APA"  # American Psychological Association
+  
+  # Citation requirements
+  requirements:
+    in_text_citations: true
+    reference_list: true
+    doi_inclusion: true
+    publication_dates: true
+    
+    # Citation format
+    format:
+      author_year: "Author (Year)"
+      page_numbers: "Author (Year, p. X)"
+      multiple_authors: "Author et al. (Year)"
+  
+  # Reference list format
+  reference_list:
+    alphabetical_order: true
+    hanging_indent: true
+    include_all_authors: true
+    format_journals: "Title, Volume(Issue), Pages"
+
+# Formatting and Layout
+formatting:
+  # Document formatting
+  document:
+    page_size: "A4"
+    margins: "1 inch all sides"
+    font: "Times New Roman or Arial"
+    font_size: "12pt"
+    line_spacing: "1.5 or double"
+    
+  # Headings and structure
+  headings:
+    use_numbered_headings: true
+    heading_levels: 3  # Maximum heading depth
+    heading_format:
+      level_1: "BOLD, UPPERCASE, CENTERED"
+      level_2: "Bold, Title Case, Left Aligned"
+      level_3: "Bold, Title Case, Left Aligned"
+  
+  # Tables and figures
+  tables_figures:
+    number_all_tables: true
+    number_all_figures: true
+    include_captions: true
+    reference_in_text: true
+    placement: "near_relevant_text"
+
+# Special Requirements
+special_requirements:
+  # Plagiarism prevention
+  plagiarism_prevention:
+    use_quotation_marks: true
+    paraphrase_appropriately: true
+    cite_all_sources: true
+    originality_threshold: 85  # Minimum originality percentage
+  
+  # Academic integrity
+  academic_integrity:
+    acknowledge_limitations: true
+    discuss_conflicting_evidence: true
+    present_balanced_view: true
+    avoid_bias: true
+  
+  # Research standards
+  research_standards:
+    systematic_approach: true
+    evidence_based_conclusions: true
+    clear_methodology: true
+    reproducible_findings: true
+
+# Output Formats
+output_formats:
+  primary: "markdown"
+  alternatives: ["pdf", "docx"]
+  
+  # Markdown specific
+  markdown:
+    use_github_flavor: true
+    include_toc: true
+    use_math_notation: true
+    code_blocks: true
+  
+  # PDF specific
+  pdf:
+    include_page_numbers: true
+    include_headers_footers: true
+    bookmarks: true
+  
+  # Word document specific
+  docx:
+    use_styles: true
+    include_toc: true
+    track_changes: false
+
+# Quality Control
+quality_control:
+  # Review checklist
+  review_checklist:
+    - "All required sections included"
+    - "Proper citation format used"
+    - "Recent sources (2014-2024) prioritized"
+    - "Academic writing standards met"
+    - "Content relevance to seminar topic"
+    - "Logical flow and structure"
+    - "Proper formatting and layout"
+    - "No plagiarism detected"
+  
+  # Validation rules
+  validation:
+    min_word_count: 5000
+    max_word_count: 15000
+    min_sources: 15
+    max_sources: 30
+    recent_sources_min: 12  # Out of minimum 15 sources
+

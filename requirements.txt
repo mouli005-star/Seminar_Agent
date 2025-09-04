@@ -1,0 +1,25 @@
+# SeminarAgent Dependencies
+# Core AI and Agent Framework
+crewai>=0.28.0
+langchain>=0.1.0
+langchain-openai>=0.0.5
+
+# Web Search and Content Processing
+duckduckgo-search>=4.1.1
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# Configuration and Utilities
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+markdown>=3.5.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Development and Testing (optional)
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+

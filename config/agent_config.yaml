@@ -1,0 +1,165 @@
+# Agent Configuration for SeminarAgent
+# This file configures how each agent behaves and operates
+
+# Web Research Agent Configuration
+web_research_agent:
+  name: "Web Research Agent"
+  role: "Academic Research Specialist"
+  goal: "Find the most relevant and recent academic journals for the given seminar topic"
+  
+  # Search Configuration
+  search:
+    max_results: 20  # Maximum number of search results to process
+    date_range: "2014-2024"  # Focus on last 10 years
+    sources:
+      - "Google Scholar"
+      - "ResearchGate"
+      - "arXiv"
+      - "PubMed"
+      - "IEEE Xplore"
+    
+    # Search query optimization
+    query_modifiers:
+      - "recent"
+      - "latest research"
+      - "current trends"
+      - "systematic review"
+      - "meta-analysis"
+    
+    # Content filtering
+    filters:
+      min_publication_year: 2014
+      content_types: ["journal article", "research paper", "review article"]
+      exclude_types: ["book chapter", "conference abstract", "news article"]
+
+# Content Extractor Agent Configuration
+content_extractor_agent:
+  name: "Content Extractor Agent"
+  role: "Content Processing Specialist"
+  goal: "Extract and structure relevant content from search results"
+  
+  extraction:
+    max_content_length: 5000  # Maximum characters to extract per source
+    required_fields:
+      - "title"
+      - "authors"
+      - "publication_date"
+      - "abstract"
+      - "keywords"
+      - "doi"
+    
+    # Content quality thresholds
+    quality_filters:
+      min_abstract_length: 100
+      min_keywords: 3
+      require_doi: false  # Some sources may not have DOI
+
+# Analysis Agent Configuration
+analysis_agent:
+  name: "Analysis Agent"
+  role: "Research Analyst"
+  goal: "Analyze gathered content and identify key insights and trends"
+  
+  analysis:
+    # Analysis depth
+    analysis_level: "comprehensive"  # Options: basic, standard, comprehensive
+    
+    # Key areas to analyze
+    focus_areas:
+      - "main_findings"
+      - "methodologies"
+      - "trends_over_time"
+      - "research_gaps"
+      - "future_directions"
+      - "controversies"
+    
+    # Output structure
+    output_format:
+      - "executive_summary"
+      - "key_insights"
+      - "trend_analysis"
+      - "research_gaps"
+      - "recommendations"
+
+# Report Writer Agent Configuration
+report_writer_agent:
+  name: "Report Writer Agent"
+  role: "Academic Report Writer"
+  goal: "Generate comprehensive seminar reports following specified rules and format"
+  
+  writing:
+    # Report structure
+    default_sections:
+      - "executive_summary"
+      - "introduction"
+      - "literature_review"
+      - "methodology"
+      - "findings"
+      - "discussion"
+      - "conclusion"
+      - "references"
+    
+    # Writing style
+    style:
+      tone: "academic"
+      language: "professional"
+      complexity: "intermediate"  # Options: basic, intermediate, advanced
+    
+    # Citation and formatting
+    formatting:
+      citation_style: "APA"  # Options: APA, MLA, Chicago, IEEE
+      reference_format: "standard"
+      include_doi: true
+      include_publication_dates: true
+
+# Coordinator Agent Configuration
+coordinator_agent:
+  name: "Coordinator Agent"
+  role: "Project Manager"
+  goal: "Orchestrate the entire research and report generation process"
+  
+  workflow:
+    # Execution order
+    agent_sequence:
+      - "web_research_agent"
+      - "content_extractor_agent"
+      - "analysis_agent"
+      - "report_writer_agent"
+    
+    # Quality control
+    quality_checks:
+      - "search_completeness"
+      - "content_relevance"
+      - "analysis_depth"
+      - "report_compliance"
+    
+    # Error handling
+    error_recovery:
+      max_retries: 3
+      fallback_strategies: true
+      continue_on_partial_failure: true
+
+# General System Configuration
+system:
+  # Performance settings
+  max_execution_time: 3600  # 1 hour maximum
+  parallel_processing: false  # Sequential execution for now
+  
+  # Logging and monitoring
+  logging:
+    level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+    save_logs: true
+    log_file: "seminar_agent.log"
+  
+  # Output settings
+  output:
+    save_intermediate_results: true
+    create_backup: true
+    output_format: "markdown"  # Options: markdown, pdf, docx
+  
+  # Memory and storage
+  storage:
+    cache_search_results: true
+    cache_duration_hours: 24
+    max_storage_mb: 100
+

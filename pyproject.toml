@@ -1,0 +1,42 @@
+[project]
+name = "seminar-agent"
+version = "0.1.0"
+description = "AI Agent for generating comprehensive seminar reports using web research"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "crewai>=0.28.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.0.5",
+    "duckduckgo-search>=4.1.1",
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+    "pyyaml>=6.0.1",
+    "python-dotenv>=1.0.0",
+    "markdown>=3.5.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
