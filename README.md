@@ -1,8 +1,8 @@
-# SeminarAgent 🤖📚
+# SeminarAgent 
 
 An intelligent AI agent system designed to generate comprehensive seminar reports by conducting web research on recent academic journals and publications.
 
-## 🎯 What It Does
+##  What It Does
 
 SeminarAgent automatically:
 - Searches for recent academic journals (last 5-10 years) based on your seminar topic
@@ -11,31 +11,31 @@ SeminarAgent automatically:
 - Provides proper citations and references
 - Creates structured, professional-quality output
 
-## 🏗️ Architecture
+## Architecture
 
 The system consists of four specialized AI agents:
 
-1. **Web Research Agent** 🔍
+1. **Web Research Agent** 
    - Searches Google Scholar, ResearchGate, arXiv, and other academic sources
    - Filters results by date (2014-2024) and relevance
    - Collects metadata and search results
 
-2. **Content Extractor Agent** 📖
+2. **Content Extractor Agent** 
    - Extracts abstracts and key content from search results
    - Processes different journal website formats
    - Structures data for analysis
 
-3. **Analysis Agent** 🧠
+3. **Analysis Agent** 
    - Analyzes gathered content for key insights
    - Identifies trends and themes
    - Synthesizes findings for report generation
 
-4. **Report Writer Agent** ✍️
+4. **Report Writer Agent** ✍
    - Generates final reports following your rules
    - Ensures proper formatting and citations
    - Creates professional-quality output
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Install Dependencies
 ```bash
